@@ -1,0 +1,923 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0512.1636                               -->
+<workbook original-version='18.1' source-build='2026.1.2 (20261.26.0512.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='food_ordering_behavior_dataset' inline='true' name='federated.0dkmlwc0k7tkss0znbxap0o9qgq5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='food_ordering_behavior_dataset' name='textscan.0dhoul61ium7fo12aujrf1svhe01'>
+            <connection class='textscan' directory='C:/Users/gangi/Downloads' filename='food_ordering_behavior_dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0dhoul61ium7fo12aujrf1svhe01' name='food_ordering_behavior_dataset.csv' table='[food_ordering_behavior_dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='order_id' ordinal='0' />
+            <column datatype='integer' name='user_id' ordinal='1' />
+            <column datatype='integer' name='age' ordinal='2' />
+            <column datatype='string' name='city' ordinal='3' />
+            <column datatype='string' name='order_time' ordinal='4' />
+            <column datatype='string' name='day_type' ordinal='5' />
+            <column datatype='string' name='cuisine' ordinal='6' />
+            <column datatype='string' name='meal_type' ordinal='7' />
+            <column datatype='string' name='restaurant_type' ordinal='8' />
+            <column datatype='integer' name='order_value' ordinal='9' />
+            <column datatype='string' name='discount_applied' ordinal='10' />
+            <column datatype='integer' name='delivery_fee' ordinal='11' />
+            <column datatype='integer' name='time_taken_to_order' ordinal='12' />
+            <column datatype='integer' name='rating_given' ordinal='13' />
+            <column datatype='string' name='is_repeat_order' ordinal='14' />
+            <column datatype='string' name='mood' ordinal='15' />
+            <column datatype='string' name='hunger_level' ordinal='16' />
+            <column datatype='string' name='company' ordinal='17' />
+            <column datatype='string' name='rainy_weather' ordinal='18' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_id]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_time]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>order_time</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_type]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>day_type</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cuisine</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cuisine]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>cuisine</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>meal_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[meal_type]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>meal_type</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>restaurant_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[restaurant_type]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>restaurant_type</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_value]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>order_value</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>discount_applied</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[discount_applied]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>discount_applied</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivery_fee</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[delivery_fee]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>delivery_fee</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_taken_to_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[time_taken_to_order]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>time_taken_to_order</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating_given</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rating_given]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>rating_given</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_repeat_order</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[is_repeat_order]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>is_repeat_order</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mood]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>mood</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hunger_level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hunger_level]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>hunger_level</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>company</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rainy_weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rainy_weather]</local-name>
+            <parent-name>[food_ordering_behavior_dataset.csv]</parent-name>
+            <remote-alias>rainy_weather</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age group' datatype='string' name='[Calculation_1368910501101569]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [age] &lt;= 20 THEN &quot;Child&quot;&#13;&#10;ELSEIF [age] &lt;= 30 THEN &quot;Gen Z&quot;&#13;&#10;ELSEIF [age] &lt;= 40 THEN &quot;Millennial&quot;&#13;&#10;ELSE &quot;Adults&quot;&#13;&#10;END' />
+      </column>
+      <column caption='food_ordering_behavior_dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Company' datatype='string' name='[company]' role='dimension' type='nominal' />
+      <column caption='Cuisine' datatype='string' name='[cuisine]' role='dimension' type='nominal' />
+      <column caption='Day Type' datatype='string' name='[day_type]' role='dimension' type='nominal' />
+      <column caption='Delivery Fee' datatype='integer' name='[delivery_fee]' role='measure' type='quantitative' />
+      <column caption='Discount Applied' datatype='string' name='[discount_applied]' role='dimension' type='nominal' />
+      <column caption='Hunger Level' datatype='string' name='[hunger_level]' role='dimension' type='nominal' />
+      <column caption='Is Repeat Order' datatype='string' name='[is_repeat_order]' role='dimension' type='nominal' />
+      <column caption='Meal Type' datatype='string' name='[meal_type]' role='dimension' type='nominal' />
+      <column caption='Mood' datatype='string' name='[mood]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Order Id' datatype='integer' name='[order_id]' role='dimension' type='ordinal' />
+      <column caption='Order Time' datatype='string' name='[order_time]' role='dimension' type='nominal' />
+      <column caption='Order Value' datatype='integer' name='[order_value]' role='measure' type='quantitative' />
+      <column caption='Rainy Weather' datatype='string' name='[rainy_weather]' role='dimension' type='nominal' />
+      <column caption='Rating Given' datatype='integer' name='[rating_given]' role='measure' type='quantitative' />
+      <column caption='Restaurant Type' datatype='string' name='[restaurant_type]' role='dimension' type='nominal' />
+      <column caption='Time Taken To Order' datatype='integer' name='[time_taken_to_order]' role='measure' type='quantitative' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/gangi/AppData/Local/Temp/TableauTemp/#TableauTemp_1cfpxv20qncvw71au9aqt02aja4n.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/01/2026 12:44:11 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>order_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[order_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8933</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>2</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[city]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city</remote-alias>
+              <ordinal>3</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[order_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_time</remote-alias>
+              <ordinal>4</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[day_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_type</remote-alias>
+              <ordinal>5</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cuisine</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cuisine]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cuisine</remote-alias>
+              <ordinal>6</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>meal_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[meal_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>meal_type</remote-alias>
+              <ordinal>7</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>restaurant_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[restaurant_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>restaurant_type</remote-alias>
+              <ordinal>8</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_value</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[order_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_value</remote-alias>
+              <ordinal>9</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2572</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>discount_applied</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[discount_applied]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>discount_applied</remote-alias>
+              <ordinal>10</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>delivery_fee</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[delivery_fee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>delivery_fee</remote-alias>
+              <ordinal>11</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>80</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time_taken_to_order</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[time_taken_to_order]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>time_taken_to_order</remote-alias>
+              <ordinal>12</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating_given</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rating_given]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating_given</remote-alias>
+              <ordinal>13</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_repeat_order</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[is_repeat_order]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_repeat_order</remote-alias>
+              <ordinal>14</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mood</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mood]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mood</remote-alias>
+              <ordinal>15</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hunger_level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[hunger_level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hunger_level</remote-alias>
+              <ordinal>16</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>company</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[company]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>company</remote-alias>
+              <ordinal>17</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rainy_weather</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rainy_weather]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rainy_weather</remote-alias>
+              <ordinal>18</ordinal>
+              <family>food_ordering_behavior_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='order_id' />
+        <field-sort-custom-order field='user_id' />
+        <field-sort-custom-order field='age' />
+        <field-sort-custom-order field='Calculation_1368910501101569' />
+        <field-sort-custom-order field='city' />
+        <field-sort-custom-order field='order_time' />
+        <field-sort-custom-order field='day_type' />
+        <field-sort-custom-order field='cuisine' />
+        <field-sort-custom-order field='meal_type' />
+        <field-sort-custom-order field='restaurant_type' />
+        <field-sort-custom-order field='order_value' />
+        <field-sort-custom-order field='discount_applied' />
+        <field-sort-custom-order field='delivery_fee' />
+        <field-sort-custom-order field='time_taken_to_order' />
+        <field-sort-custom-order field='rating_given' />
+        <field-sort-custom-order field='is_repeat_order' />
+        <field-sort-custom-order field='mood' />
+        <field-sort-custom-order field='hunger_level' />
+        <field-sort-custom-order field='company' />
+        <field-sort-custom-order field='rainy_weather' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='food_ordering_behavior_dataset.csv' id='food_ordering_behavior_dataset.csv_49D0B2EA08D54F24A201D49697B4B592'>
+            <properties context=''>
+              <relation connection='textscan.0dhoul61ium7fo12aujrf1svhe01' name='food_ordering_behavior_dataset.csv' table='[food_ordering_behavior_dataset#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='order_id' ordinal='0' />
+                  <column datatype='integer' name='user_id' ordinal='1' />
+                  <column datatype='integer' name='age' ordinal='2' />
+                  <column datatype='string' name='city' ordinal='3' />
+                  <column datatype='string' name='order_time' ordinal='4' />
+                  <column datatype='string' name='day_type' ordinal='5' />
+                  <column datatype='string' name='cuisine' ordinal='6' />
+                  <column datatype='string' name='meal_type' ordinal='7' />
+                  <column datatype='string' name='restaurant_type' ordinal='8' />
+                  <column datatype='integer' name='order_value' ordinal='9' />
+                  <column datatype='string' name='discount_applied' ordinal='10' />
+                  <column datatype='integer' name='delivery_fee' ordinal='11' />
+                  <column datatype='integer' name='time_taken_to_order' ordinal='12' />
+                  <column datatype='integer' name='rating_given' ordinal='13' />
+                  <column datatype='string' name='is_repeat_order' ordinal='14' />
+                  <column datatype='string' name='mood' ordinal='15' />
+                  <column datatype='string' name='hunger_level' ordinal='16' />
+                  <column datatype='string' name='company' ordinal='17' />
+                  <column datatype='string' name='rainy_weather' ordinal='18' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Orders by Age Group &amp; Restaurant Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='food_ordering_behavior_dataset' name='federated.0dkmlwc0k7tkss0znbxap0o9qgq5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dkmlwc0k7tkss0znbxap0o9qgq5'>
+            <column caption='Age group' datatype='string' name='[Calculation_1368910501101569]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [age] &lt;= 20 THEN &quot;Child&quot;&#13;&#10;ELSEIF [age] &lt;= 30 THEN &quot;Gen Z&quot;&#13;&#10;ELSEIF [age] &lt;= 40 THEN &quot;Millennial&quot;&#13;&#10;ELSE &quot;Adults&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[order_id]' derivation='Count' name='[cnt:order_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1368910501101569]' derivation='None' name='[none:Calculation_1368910501101569:nk]' pivot='key' type='nominal' />
+            <column-instance column='[restaurant_type]' derivation='None' name='[none:restaurant_type:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' caption='Order Id' datatype='integer' name='[order_id]' role='dimension' type='ordinal' />
+            <column caption='Order Value' datatype='integer' name='[order_value]' role='measure' type='quantitative' />
+            <column caption='Restaurant Type' datatype='string' name='[restaurant_type]' role='dimension' type='nominal' />
+            <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[order_value]' derivation='Sum' name='[sum:order_value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:Calculation_1368910501101569:nk]' direction='DESC' using='[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[sum:age:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[cnt:order_id:qk]' field-type='quantitative' max='26282' min='-4005' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:restaurant_type:nk]' />
+              <text column='[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[sum:order_value:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='20' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[cnt:order_id:qk]</rows>
+        <cols>[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:Calculation_1368910501101569:nk]</cols>
+      </table>
+      <simple-id uuid='{8F6E904E-2864-4B23-9282-6A712C4D56D7}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:restaurant_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:Calculation_1368910501101569:nk]</field>
+            <field>[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:order_id:ok]</field>
+            <field>[federated.0dkmlwc0k7tkss0znbxap0o9qgq5].[none:restaurant_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F9DE011D-A7DA-4B96-92CD-F5A3263E0059}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      EtWWB1e/AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
