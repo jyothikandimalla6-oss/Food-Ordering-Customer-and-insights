@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed analysis documentation for the Food Ordering Behaviour and Customer Trends project. Details dataset variables, business problems, and recommendations.">
+  <meta name="author" content="Data Analyst Portfolio">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Project Documentation - Food Ordering Trends">
+  <meta property="og:description" content="In-depth analysis write-up detailing SQL and Python data prep, KPIs, and operational findings.">
+  <meta property="og:type" content="website">
+  
+  <title>About Project | Food Ordering Behaviour & Customer Trends</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Custom JS -->
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <i class="fa-solid fa-pizza-slice"></i>
+        <span>Food Analytics</span>
+      </a>
+      
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <nav class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="story.html" class="nav-link">Story</a>
+        <a href="about.html" class="nav-link">About Project</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="embed-page-header">
+    <div class="container">
+      <h1 class="embed-page-title">Project Documentation</h1>
+      <p class="embed-page-desc">Explore the methodologies, datasets, and strategic insights generated from this analysis.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DOCUMENTATION SECTION WITH SIDEBAR
+       ========================================== -->
+  <section class="doc-section-outer">
+    <div class="container">
+      <div class="doc-grid">
+        
+        <!-- Sticky Sidebar Navigation -->
+        <aside class="doc-sidebar">
+          <div class="doc-sidebar-title">Contents</div>
+          <nav class="doc-nav-list">
+            <a href="#overview" class="doc-nav-link active">Project Overview</a>
+            <a href="#problem" class="doc-nav-link">Business Problem</a>
+            <a href="#dataset" class="doc-nav-link">Dataset Summary</a>
+            <a href="#kpis" class="doc-nav-link">KPI Definitions</a>
+            <a href="#visualizations" class="doc-nav-link">Visualizations Used</a>
+            <a href="#insights" class="doc-nav-link">Business Insights</a>
+            <a href="#conclusion" class="doc-nav-link">Conclusion & Recs</a>
+          </nav>
+        </aside>
+
+        <!-- Documentation Content -->
+        <main class="doc-content">
+          
+          <!-- Section 1: Project Overview -->
+          <section id="overview" class="doc-section">
+            <h2>Project Overview</h2>
+            <p>
+              In the modern on-demand food delivery landscape, success depends on operational efficiency and matching restaurant offerings with customer expectations. The <strong>Food Ordering Behaviour and Customer Trends</strong> project was initiated to synthesize delivery logistics and customer feedback.
+            </p>
+            <p>
+              By leveraging transactions data, customer ratings, and geographic points, we constructed a multi-layered analysis that uncovers key friction points in ordering platforms. The project traces raw data through cleaning stages in Python (Pandas/NumPy), database modeling via SQL, and final interactive representation using Tableau.
+            </p>
+            <div class="doc-callout">
+              <p><strong>Primary Analytics Goal:</strong> To convert transactional datasets into actionable restaurant profiles, driver fleet evaluations, and demographic segmentation models.</p>
+            </div>
+          </section>
+
+          <!-- Section 2: Business Problem -->
+          <section id="problem" class="doc-section">
+            <h2>Business Problem</h2>
+            <p>
+              Platform management groups face three key operational concerns:
+            </p>
+            <div class="doc-list">
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Logistical Delays:</strong> Delivery times frequently spike during periods of poor weather and peak times. We need to identify variables contributing to dispatch bottlenecks.</span>
+              </div>
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Rating Divergences:</strong> Certain cuisines receive low customer ratings despite high order volumes, suggesting product quality issues or delivery-time sensitivities.</span>
+              </div>
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Customer Retention:</strong> Order sizes and average spending values fluctuate significantly between student demographics and standard family profiles.</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Dataset Summary -->
+          <section id="dataset" class="doc-section">
+            <h2>Dataset Summary</h2>
+            <p>
+              The study utilizes a comprehensive food delivery transactions log containing spatial, temporal, and user feedback metrics.
+            </p>
+            <div class="doc-table-wrapper">
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th>Data Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Order_ID</td>
+                    <td>Alphanumeric</td>
+                    <td>Unique transaction identifier</td>
+                  </tr>
+                  <tr>
+                    <td>Customer_ID</td>
+                    <td>Alphanumeric</td>
+                    <td>Unique user identifier linked to profile parameters</td>
+                  </tr>
+                  <tr>
+                    <td>Restaurant_Name</td>
+                    <td>Text</td>
+                    <td>Name of food vendor</td>
+                  </tr>
+                  <tr>
+                    <td>Cuisine_Style</td>
+                    <td>Categorical</td>
+                    <td>Food classification (Asian, Italian, Mexican, etc.)</td>
+                  </tr>
+                  <tr>
+                    <td>Delivery_Time_Min</td>
+                    <td>Numeric</td>
+                    <td>Total minutes from order confirmation to door arrival</td>
+                  </tr>
+                  <tr>
+                    <td>Weather_Condition</td>
+                    <td>Categorical</td>
+                    <td>Climatic attributes at delivery (Sunny, Rainy, Stormy)</td>
+                  </tr>
+                  <tr>
+                    <td>Customer_Rating</td>
+                    <td>Numeric (1–5)</td>
+                    <td>Rating score left by customer on app</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section 4: KPI Definitions -->
+          <section id="kpis" class="doc-section">
+            <h2>KPI Definitions</h2>
+            <p>
+              These target parameters are monitored to gauge the overall operational health of the platform:
+            </p>
+            
+            <div class="doc-mini-kpis">
+              <div class="doc-mini-kpi">
+                <h4>Total Revenue</h4>
+                <div class="val">$3.48M</div>
+              </div>
+              <div class="doc-mini-kpi">
+                <h4>Avg Order Value</h4>
+                <div class="val">$22.56</div>
+              </div>
+              <div class="doc-mini-kpi">
+                <h4>Delivery Transit</h4>
+                <div class="val">28.4 min</div>
+              </div>
+            </div>
+
+            <div class="doc-table-wrapper">
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th>KPI Metric</th>
+                    <th>Formula / Logic</th>
+                    <th>Strategic Importance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Average Order Value (AOV)</strong></td>
+                    <td>Total Revenue / Count(Orders)</td>
+                    <td>Tracks basket expansion; critical for fee pricing models.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Driver Transit Performance</strong></td>
+                    <td>Average of (Door_Arrival_Time - Picked_Up_Time)</td>
+                    <td>Measures courier logistics, road routing efficiency, and delivery delays.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Restaurant Error Index</strong></td>
+                    <td>Count(Ratings &lt; 3.0) / Count(Ratings)</td>
+                    <td>Highlights quality issues, packaging faults, or order accuracy problems.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section 5: Visualizations Used -->
+          <section id="visualizations" class="doc-section">
+            <h2>Visualizations Used</h2>
+            <p>
+              The Tableau dashboard uses several specific visualization components to clarify findings:
+            </p>
+            <div class="doc-list">
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <span><strong>Choropleth Delivery Maps:</strong> Color-scales regions by average courier speed to isolate urban gridlock zones.</span>
+              </div>
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <span><strong>Scatter Plot Correlation Matrices:</strong> Maps average customer rating against average preparation time to test if prep times drive rating outcomes.</span>
+              </div>
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <span><strong>Dual-Axis Trend Lines:</strong> Tracks hour-by-hour order volumes alongside courier capacities to identify driver deficits.</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Business Insights -->
+          <section id="insights" class="doc-section">
+            <h2>Business Insights</h2>
+            <p>
+              Synthesizing the query outputs and Tableau dashboards yielded several key operational findings:
+            </p>
+            <div class="doc-callout">
+              <p><strong>1. Peak-Hour Deliveries & Weather Spikes:</strong> Delivery times increase by up to <strong>35% during rainy weather</strong>. This delay is mainly caused by lack of courier coverage rather than prep times. Dynamic routing adjustments for bad weather could help stabilize delivery times.</p>
+            </div>
+            <div class="doc-callout">
+              <p><strong>2. Cuisine Margin Paradox:</strong> While Fast Food commands the highest total order count (representing <strong>45% of total order volume</strong>), its AOV is lower ($12.50) compared to Continental and Asian food types ($32.40). Restaurants should bundle drinks or desserts to increase low AOVs.</p>
+            </div>
+            <div class="doc-callout">
+              <p><strong>3. The Preparedness Deficit:</strong> Orders placed between <strong>7 PM and 9 PM</strong> experience a 12-minute prep delay compared to afternoon periods. This indicates restaurant kitchen capacity bottlenecks during peak dinner times.</p>
+            </div>
+          </section>
+
+          <!-- Section 7: Conclusion & Recommendations -->
+          <section id="conclusion" class="doc-section">
+            <h2>Conclusion & Recommendations</h2>
+            <p>
+              Based on the data trends, we recommend the following strategies to improve operations:
+            </p>
+            <div class="doc-list">
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Implement Weather-Induced Incentives:</strong> Introduce weather-based bonuses for couriers during rainy/stormy periods to ensure adequate driver supply and prevent order backlog.</span>
+              </div>
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Introduce Smart Bundling Promos:</strong> Drive higher basket values by automatically suggesting beverage and side pairings for restaurant categories with lower AOVs (under $15.00).</span>
+              </div>
+              <div class="doc-list-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Promote Kitchen Staggering Rules:</strong> Offer minor customer discounts for ordering outside of peak hours (e.g. 6:00 PM or 9:15 PM) to reduce pressure on restaurant kitchens.</span>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h3><i class="fa-solid fa-pizza-slice"></i> Food Analytics</h3>
+          <p>A premium data analysis portfolio showcasing food ordering behavior patterns, logistics performance, and customer trends.</p>
+          <div class="footer-social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:email@example.com" class="footer-social-icon" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Tableau Dashboard</a>
+            <a href="story.html">Tableau Story</a>
+            <a href="about.html">About Project</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a>
+            <a href="about.html#dataset">Dataset Summary</a>
+            <a href="about.html#insights">Business Insights</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Food Ordering Analytics. Created for Portfolio presentation.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Food Ordering Behaviour and Customer Trends - A premium data analytics portfolio project examining customer preferences, delivery timelines, ratings, and revenue drivers.">
+  <meta name="author" content="Data Analyst Portfolio">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Food Ordering Behaviour & Customer Trends">
+  <meta property="og:description" content="A detailed data analytics dashboard tracking delivery performance, customer demographics, and revenue trends.">
+  <meta property="og:type" content="website">
+  
+  <title>Food Ordering Behaviour & Customer Trends | Analytics Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Custom JS -->
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <i class="fa-solid fa-pizza-slice"></i>
+        <span>Food Analytics</span>
+      </a>
+      
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <nav class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="story.html" class="nav-link">Story</a>
+        <a href="about.html" class="nav-link">About Project</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-chart-line"></i> Tableau Portfolio Project
+      </div>
+      <h1>
+        <span class="hero-title-gradient">Food Ordering Behaviour</span><br>
+        & Customer Trends
+      </h1>
+      <p class="hero-description">
+        An interactive, end-to-end data analytics project discovering delivery performance bottlenecks, customer ordering patterns, and revenue opportunities to drive restaurant platform decisions.
+      </p>
+      <div class="hero-actions">
+        <a href="dashboard.html" class="btn btn-primary">
+          <i class="fa-solid fa-chart-column"></i> View Dashboard
+        </a>
+        <a href="story.html" class="btn btn-outline">
+          <i class="fa-solid fa-book-open"></i> View Story
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i> Repository
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       KPI CARDS SECTION
+       ========================================== -->
+  <section class="kpis">
+    <div class="container">
+      <div class="kpi-grid">
+        <!-- Card 1: Total Orders -->
+        <div class="card kpi-card kpi-orders fade-up-element">
+          <div>
+            <div class="kpi-header">
+              <span class="kpi-title">Total Orders</span>
+              <div class="kpi-icon-wrapper">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+            <div class="kpi-value count-up" data-value="154.2" data-suffix="K" data-decimals="1">0</div>
+          </div>
+          <div class="kpi-footer">
+            <span class="trend-up"><i class="fa-solid fa-arrow-up"></i> 12.4%</span>
+            <span class="kpi-trend-text">vs last month</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Revenue -->
+        <div class="card kpi-card kpi-revenue fade-up-element delay-1">
+          <div>
+            <div class="kpi-header">
+              <span class="kpi-title">Total Revenue</span>
+              <div class="kpi-icon-wrapper">
+                <i class="fa-solid fa-dollar-sign"></i>
+              </div>
+            </div>
+            <div class="kpi-value count-up" data-value="3.48" data-prefix="$" data-suffix="M" data-decimals="2">0</div>
+          </div>
+          <div class="kpi-footer">
+            <span class="trend-up"><i class="fa-solid fa-arrow-up"></i> 8.2%</span>
+            <span class="kpi-trend-text">vs last month</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Average Order Value -->
+        <div class="card kpi-card kpi-aov fade-up-element delay-2">
+          <div>
+            <div class="kpi-header">
+              <span class="kpi-title">Avg Order Value</span>
+              <div class="kpi-icon-wrapper">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+            </div>
+            <div class="kpi-value count-up" data-value="22.56" data-prefix="$" data-decimals="2">0</div>
+          </div>
+          <div class="kpi-footer">
+            <span class="trend-up"><i class="fa-solid fa-arrow-up"></i> 1.5%</span>
+            <span class="kpi-trend-text">vs last month</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Average Delivery Time -->
+        <div class="card kpi-card kpi-delivery fade-up-element delay-3">
+          <div>
+            <div class="kpi-header">
+              <span class="kpi-title">Avg Delivery Time</span>
+              <div class="kpi-icon-wrapper">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+            </div>
+            <div class="kpi-value count-up" data-value="28.4" data-suffix="m" data-decimals="1">0</div>
+          </div>
+          <div class="kpi-footer">
+            <span class="trend-down"><i class="fa-solid fa-arrow-down"></i> 4.1%</span>
+            <span class="kpi-trend-text">faster delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ABOUT PROJECT SUMMARY SECTION
+       ========================================== -->
+  <section class="about-summary" id="about-summary">
+    <div class="container">
+      <div class="about-summary-grid">
+        <div class="about-summary-content fade-up-element">
+          <span class="section-subtitle">PROJECT SCOPE</span>
+          <h3>Understanding Culinary Demands & Platforms</h3>
+          <p>
+            This dashboard project analyzes real-world transaction patterns to answer fundamental questions about the operational efficiency of food ordering platforms. We synthesize millions of data points to evaluate driver assignments, platform ratings, and high-revenue food options.
+          </p>
+          <div class="about-summary-list">
+            <div class="about-summary-item">
+              <i class="fa-solid fa-user-check"></i>
+              <div>
+                <h4>Customer Behaviour</h4>
+                <p>Decoding order frequency, peak purchase times, ratings, and meal options across multiple regions.</p>
+              </div>
+            </div>
+            <div class="about-summary-item">
+              <i class="fa-solid fa-fire"></i>
+              <div>
+                <h4>Cuisine Trends</h4>
+                <p>Tracking high-volume categories like Asian, Continental, and American cuisines to isolate market preference shifts.</p>
+              </div>
+            </div>
+            <div class="about-summary-item">
+              <i class="fa-solid fa-truck"></i>
+              <div>
+                <h4>Delivery Performance</h4>
+                <p>Measuring the operational throughput, average transit speeds, and weather impacts on arrival timelines.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-summary-visual fade-up-element delay-2">
+          <!-- Glassmorphic Dashboard Preview mockup -->
+          <div class="mock-preview">
+            <div class="mock-preview-header">
+              <span class="mock-dot mock-dot-red"></span>
+              <span class="mock-dot mock-dot-yellow"></span>
+              <span class="mock-dot mock-dot-green"></span>
+            </div>
+            <div class="mock-preview-body">
+              <div class="mock-row">
+                <div class="mock-widget">
+                  <div class="mock-text">4.6 ★</div>
+                  <div class="mock-label">Avg Restaurant Rating</div>
+                </div>
+                <div class="mock-widget">
+                  <div class="mock-bar-chart">
+                    <span class="mock-bar"></span>
+                    <span class="mock-bar"></span>
+                    <span class="mock-bar"></span>
+                    <span class="mock-bar"></span>
+                    <span class="mock-bar"></span>
+                  </div>
+                  <div class="mock-label">Cuisine Breakdown</div>
+                </div>
+              </div>
+              <div class="mock-row">
+                <div class="mock-widget">
+                  <div class="mock-line-chart">
+                    <svg class="mock-line-svg" viewBox="0 0 100 40">
+                      <path d="M0,35 Q15,10 30,25 T60,5 T90,30 L100,10" fill="none" stroke="var(--color-cyan)" stroke-width="2"></path>
+                    </svg>
+                  </div>
+                  <div class="mock-label">Weekly Order Flow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TECHNOLOGY STACK SECTION
+       ========================================== -->
+  <section class="technologies">
+    <div class="container">
+      <div class="section-header fade-up-element">
+        <span class="section-subtitle">TECH STACK</span>
+        <h2>Built with Modern Tools</h2>
+      </div>
+      
+      <div class="technologies-grid">
+        <div class="card tech-card tech-python fade-up-element">
+          <i class="fa-brands fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="card tech-card tech-sql fade-up-element delay-1">
+          <i class="fa-solid fa-database"></i>
+          <span>SQL</span>
+        </div>
+        <div class="card tech-card tech-excel fade-up-element delay-2">
+          <i class="fa-regular fa-file-excel"></i>
+          <span>Excel</span>
+        </div>
+        <div class="card tech-card tech-tableau fade-up-element delay-3">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Tableau</span>
+        </div>
+        <div class="card tech-card tech-html fade-up-element delay-4">
+          <i class="fa-brands fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="card tech-card tech-css fade-up-element delay-5">
+          <i class="fa-brands fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="card tech-card tech-javascript fade-up-element delay-6">
+          <i class="fa-brands fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURES SECTION
+       ========================================== -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header fade-up-element">
+        <span class="section-subtitle">PROJECT CAPABILITIES</span>
+        <h2>Analytical Features</h2>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="card feature-card fade-up-element">
+          <div class="feature-icon-container">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h3>Interactive Dashboard</h3>
+          <p>Filter data dynamically by city type, cuisine style, ratings, and weekday characteristics to target precise customer contexts.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="card feature-card fade-up-element delay-1">
+          <div class="feature-icon-container">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Business Insights</h3>
+          <p>Extract strategic metrics focused on optimizing order consolidation, restaurant density planning, and driver dispatch routines.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="card feature-card fade-up-element delay-2">
+          <div class="feature-icon-container">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h3>Customer Analytics</h3>
+          <p>Analyze patterns regarding consumer age demographics, rating behaviors, and preference parameters in urban areas.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="card feature-card fade-up-element">
+          <div class="feature-icon-container">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3>Revenue Analysis</h3>
+          <p>Identify primary basket metrics, average billing values, and order multipliers associated with cuisine categories.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="card feature-card fade-up-element delay-1">
+          <div class="feature-icon-container">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3>Delivery Performance</h3>
+          <p>Evaluate driver speeds, delivery lag factors, route difficulties, and climatic dependencies across ordering timelines.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="card feature-card fade-up-element delay-2">
+          <div class="feature-icon-container">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3>Cuisine Trends</h3>
+          <p>Examine popularity hierarchies, cuisine densities, and seasonality shifts impacting local restaurants.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h3><i class="fa-solid fa-pizza-slice"></i> Food Analytics</h3>
+          <p>A premium data analysis portfolio showcasing food ordering behavior patterns, logistics performance, and customer trends.</p>
+          <div class="footer-social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:email@example.com" class="footer-social-icon" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Tableau Dashboard</a>
+            <a href="story.html">Tableau Story</a>
+            <a href="about.html">About Project</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a>
+            <a href="about.html#dataset">Dataset Summary</a>
+            <a href="about.html#insights">Business Insights</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Food Ordering Analytics. Created for Portfolio presentation.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

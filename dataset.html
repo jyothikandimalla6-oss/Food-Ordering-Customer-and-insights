@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preview the transactions dataset used for the Food Ordering Behaviour and Customer Trends analytics project.">
+  <meta name="author" content="Data Analyst Portfolio">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dataset Preview - Food Ordering Trends">
+  <meta property="og:description" content="View schema and preview records for the transaction analysis database.">
+  <meta property="og:type" content="website">
+  
+  <title>Dataset Preview | Food Ordering Behaviour & Customer Trends</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Custom JS -->
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <i class="fa-solid fa-pizza-slice"></i>
+        <span>Food Analytics</span>
+      </a>
+      
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <nav class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="story.html" class="nav-link">Story</a>
+        <a href="about.html" class="nav-link">About Project</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="embed-page-header">
+    <div class="container">
+      <h1 class="embed-page-title">Dataset Preview & Download</h1>
+      <p class="embed-page-desc">Examine the structured columns, database types, and transactional records used in this analysis.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DATASET VIEWER SECTION
+       ========================================== -->
+  <section class="dataset-preview-section" style="padding-bottom: 6rem;">
+    <div class="container">
+      
+      <!-- Download Alert Card -->
+      <div class="card fade-up-element" style="margin-bottom: 3rem; padding: 2.25rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-cloud-arrow-down" style="color: var(--color-cyan); margin-right: 0.5rem;"></i> Download Raw Transaction Dataset</h3>
+            <p style="margin-bottom: 0; max-width: 600px;">Download the cleaned CSV transaction log to explore the variables, run custom SQL queries, or perform local analysis using Python.</p>
+          </div>
+          <a href="download" class="btn btn-primary" style="white-space: nowrap;">
+            <i class="fa-solid fa-download"></i> Download CSV File
+          </a>
+        </div>
+      </div>
+
+      <!-- Preview Header -->
+      <div class="section-header fade-up-element" style="text-align: left; margin: 0 0 2rem; max-width: 100%;">
+        <span class="section-subtitle">SCHEMA PREVIEW</span>
+        <h2>First 20 Database Rows</h2>
+      </div>
+
+      <!-- Dynamic Data Table Wrapper -->
+      <div class="card fade-up-element" style="padding: 1.5rem; overflow: hidden;">
+        <div class="doc-table-wrapper" style="margin: 0;">
+          
+          <!-- Jinja logic for Flask server -->
+          {% if has_file and preview %}
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  {% for key in preview[0].keys() %}
+                    <th>{{ key }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in preview %}
+                  <tr>
+                    {% for val in row.values() %}
+                      <td>{{ val }}</td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+            <!-- Mock preview fallback if opened statically or file missing -->
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Order_ID</th>
+                  <th>Customer_ID</th>
+                  <th>Restaurant_Name</th>
+                  <th>Cuisine_Style</th>
+                  <th>Cost_USD</th>
+                  <th>Customer_Rating</th>
+                  <th>Delivery_Time_Min</th>
+                  <th>Weather</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ORD-0091</td>
+                  <td>CUST-883</td>
+                  <td>Blue Plate Bistro</td>
+                  <td>Continental</td>
+                  <td>28.50</td>
+                  <td>4.8</td>
+                  <td>24.5</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>ORD-0092</td>
+                  <td>CUST-219</td>
+                  <td>Taco Paradise</td>
+                  <td>Mexican</td>
+                  <td>14.20</td>
+                  <td>4.2</td>
+                  <td>19.0</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>ORD-0093</td>
+                  <td>CUST-412</td>
+                  <td>Golden Wok</td>
+                  <td>Asian</td>
+                  <td>32.40</td>
+                  <td>4.6</td>
+                  <td>34.1</td>
+                  <td>Rainy</td>
+                </tr>
+                <tr>
+                  <td>ORD-0094</td>
+                  <td>CUST-053</td>
+                  <td>Burger Express</td>
+                  <td>American</td>
+                  <td>11.90</td>
+                  <td>3.8</td>
+                  <td>28.8</td>
+                  <td>Rainy</td>
+                </tr>
+                <tr>
+                  <td>ORD-0095</td>
+                  <td>CUST-104</td>
+                  <td>The Pizza Stone</td>
+                  <td>Italian</td>
+                  <td>24.80</td>
+                  <td>4.7</td>
+                  <td>22.2</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>ORD-0096</td>
+                  <td>CUST-662</td>
+                  <td>Curry House</td>
+                  <td>Indian</td>
+                  <td>29.90</td>
+                  <td>4.5</td>
+                  <td>27.5</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>ORD-0097</td>
+                  <td>CUST-389</td>
+                  <td>Green Garden Salad</td>
+                  <td>Healthy</td>
+                  <td>16.50</td>
+                  <td>4.1</td>
+                  <td>18.4</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>ORD-0098</td>
+                  <td>CUST-802</td>
+                  <td>Taco Paradise</td>
+                  <td>Mexican</td>
+                  <td>15.80</td>
+                  <td>4.3</td>
+                  <td>21.0</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>ORD-0099</td>
+                  <td>CUST-542</td>
+                  <td>Golden Wok</td>
+                  <td>Asian</td>
+                  <td>41.20</td>
+                  <td>4.9</td>
+                  <td>31.5</td>
+                  <td>Rainy</td>
+                </tr>
+                <tr>
+                  <td>ORD-0100</td>
+                  <td>CUST-119</td>
+                  <td>Burger Express</td>
+                  <td>American</td>
+                  <td>12.50</td>
+                  <td>4.0</td>
+                  <td>25.6</td>
+                  <td>Sunny</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-card); background: rgba(11, 15, 25, 0.3);">
+              <i class="fa-solid fa-circle-info" style="color: var(--color-indigo); font-size: 1.5rem; margin-bottom: 0.75rem;"></i>
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.25rem;">Preview Mode Enabled</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0; color: var(--text-muted);">This is a representation of the dataset schema. Run the Flask application with the actual dataset inside the <code>data/</code> folder to render live records.</p>
+            </div>
+          {% endif %}
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h3><i class="fa-solid fa-pizza-slice"></i> Food Analytics</h3>
+          <p>A premium data analysis portfolio showcasing food ordering behavior patterns, logistics performance, and customer trends.</p>
+          <div class="footer-social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:email@example.com" class="footer-social-icon" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Tableau Dashboard</a>
+            <a href="story.html">Tableau Story</a>
+            <a href="about.html">About Project</a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a>
+            <a href="about.html#dataset">Dataset Summary</a>
+            <a href="about.html#insights">Business Insights</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Food Ordering Analytics. Created for Portfolio presentation.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
