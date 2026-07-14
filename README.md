@@ -42,3 +42,12 @@ Food-Ordering-Analytics-Dashboard/
 │
 └── README.md                   # Technical repository documentation
 ```
+# Live Demo
+
+🔗 Tableau Public Dashboard:
+https://public.tableau.com/app/profile/jyothi.kandimalla/vizzes
+🎥 Project Demo Video:
+https://drive.google.com/file/d/1NSwSb16a_fJAtsFFf2sB6w1HZTrS_qac/view?usp=drive_link
+
+📂 GitHub Repository:
+https://github.com/jyothikandimalla6-oss/Food-Ordering-Customer-and-insights
